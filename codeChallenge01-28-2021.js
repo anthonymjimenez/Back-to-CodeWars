@@ -18,3 +18,15 @@ function incrementString(string) {
 
 console.log(incrementString("foo")); //, "foobar001")
 // console.log(incrementString("foo"))//, "foo1")
+
+// https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/javascript
+
+const moveZeros =(array)=> [...array.filter((notZero) => notZero !== 0), ...array.filter((zero)=> zero === 0)]
+
+// https://www.codewars.com/kata/52449b062fb80683ec000024/train/javascript
+
+const generateHashtag = str => {
+    var noWhite = str.replace(/\s/g, "")
+    return noWhite !== "" && noWhite.length < 140 ? `#${str.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/\s/g, "")}` : false
+  }
+  
