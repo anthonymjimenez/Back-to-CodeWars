@@ -49,9 +49,40 @@ var twoSum = function(nums, target) {
 
     for(let x = 0; x < nums.length; x++) {
         let desired = target - nums[x]
-        if(Object.values(lookUp).includes(desired) && Object.keys(lookUp).find(key => lookUp[key] === desired) != x) {
-            return [x,  Object.keys(lookUp).find(key => lookUp[key] === desired)]
-        }
+        if(Object.values(lookUp).includes(desired) && parseInt(Object.keys(lookUp).find(key => lookUp[key] === desired)) !== x) {
+             return [x,  parseInt(Object.keys(lookUp).find(key => lookUp[key] === desired))]
+         }
+        console.log(desired, Object.keys(lookUp).find(key => lookUp[key] === desired), Object.values(lookUp).find(value => value === desired))
     }
+
+    return 'huh'
 }
- console.log(twoSum([3,2,4],6))
+
+
+var _twoSum = function(nums, target) {
+  
+    for(let x = 0; x < nums.length; x++) {
+        let desired = target - nums[x]
+      nums.find(key => console.log(key, desired))
+        if(nums.includes(desired) && nums.findIndex(num => num === desired) != x) {
+            return [x,  nums.findIndex(num => num === desired)]
+    }
+}}
+
+console.log(_twoSum([3,3,2,4],6))
+
+// var twoSum = function(nums, target) {
+//     let lookUp = {}
+//     for(let x = 0; x < nums.length; x++) {
+//         lookUp[x] = nums[x]
+//     }
+
+    
+//     for(let x = 0; x < nums.length; x++) {
+//         let desired = target - nums[x]
+//         if(Object.values(lookUp).includes(desired) && Object.keys(lookUp).find(key => lookUp[key] === desired) != x) {
+//              return [x,  Object.keys(lookUp).find(key => lookUp[key] === desired)]
+//          }
+//     }
+
+// }
