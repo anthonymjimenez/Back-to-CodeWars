@@ -13,17 +13,12 @@
 
 var replaceElements = function (arr) {
   var maxNumber = -1;
-  var lastNumber = arr[arr.length - 1];
   var array = [];
   for (let x = arr.length - 1; x >= 0; x--) {
-    // O(n)
-    let tempNumber = maxNumber;
+    array.push(maxNumber);
     maxNumber = Math.max(maxNumber, arr[x]);
-    lastNumber == arr[x] && arr.length == x + 1
-      ? array.push(-1)
-      : array.push(tempNumber);
   }
-  return array;
+  return array.reverse();
 };
 
-replaceElements([17, 18, 5, 4, 6, 1]);
+console.log(replaceElements([17, 18, 5, 4, 6, 1]));
