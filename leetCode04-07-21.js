@@ -21,4 +21,4 @@ var replaceElements = function (arr) {
   return array.reverse();
 };
 
-console.log(replaceElements([17, 18, 5, 4, 6, 1]));
+console.log(replaceElements([17, 5, 18, 5, 4, 6, 1]));
